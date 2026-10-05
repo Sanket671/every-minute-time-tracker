@@ -1,0 +1,16 @@
+{
+  "name": "every-minute-time-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "start": "node server/index.js",
+    "build": "npm --prefix client run build",
+    "dev": "node server/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.8.1"
+  }
+}

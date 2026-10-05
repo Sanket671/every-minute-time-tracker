@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: every-minute-time-tracker
+    env: node
+    plan: free
+    buildCommand: npm install && npm --prefix client install --include=dev && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DAY_START
+        value: 08:00
+      - key: DAY_END
+        value: 20:00
+      - key: TIMEZONE
+        value: Asia/Kolkata
+      - key: MONGODB_URI
+        sync: false
+      - key: APP_ACCESS_KEY
+        sync: false
